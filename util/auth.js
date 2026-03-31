@@ -12,9 +12,8 @@ async function authenticate(mode, email, password) {
 }
 export function createUser(email, password) {
   return authenticate("signUp", email, password);
-  return response.data;
 }
 
 export function login(email, password) {
-  return authenticate("signInWithPassword", email, [password]);
+  return authenticate("signInWithPassword", email, password);
 }
